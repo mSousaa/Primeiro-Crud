@@ -17,17 +17,17 @@
         </div>
         <div class="form-field">
             <div><label for="">Senha</label></div>
-            <input type="password" placeholder="Senha" id="senha">
+            <input type="password" placeholder="Senha" id="senha" onchange="onChangePassword()">
             <div class="error" id="senha-error">Senha é obrigatória</div>
             <div class="error" id="senha-minima">Senha deve ter no minimo 6 caracteres</div>
         </div>
         <div class="form-field">
             <div><label for="">Confirmar Senha</label></div>
-            <input type="password" placeholder="Confirmar senha" id="confirmPassword">
+            <input type="password" placeholder="Confirmar senha" id="confirmPassword" onchange="onChangeConfirmPassword()">
             <div class="error" id="senha-nao-igual">Senha e Confirmar Senha devem ser iguais</div>
         </div>
         <div class="form-field">
-            <button type="button" disabled="true">Registrar</button>
+            <button type="button" disabled="true" id="register-button">Registrar</button>
         </div>
         <div class="form-field">
             <button type="button">Login</button>

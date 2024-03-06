@@ -12,19 +12,19 @@
         <div class="form-field">
             <div><label for="">Email</label></div>
             <input type="email" placeholder="seu@gmail.com" onchange="onChangeEmail()" id="email">
-            <div class="error" id="emailerror">Email é obrigatório</div>
-            <div class="error" id="email-invalido">Email é inválido</div>
+            <div class="error" id="email-required-error">Email é obrigatório</div>
+            <div class="error" id="email-invalid-error">Email é inválido</div>
         </div>
         <div class="form-field">
             <div><label for="">Senha</label></div>
-            <input type="password" placeholder="Senha" id="senha" onchange="onChangePassword()">
-            <div class="error" id="senha-error">Senha é obrigatória</div>
-            <div class="error" id="senha-minima">Senha deve ter no minimo 6 caracteres</div>
+            <input type="password" placeholder="Senha" id="password" onchange="onChangePassword()">
+            <div class="error" id="password-required-error">Senha é obrigatória</div>
+            <div class="error" id="password-min-length-error">Senha deve ter no minimo 6 caracteres</div>
         </div>
         <div class="form-field">
             <div><label for="">Confirmar Senha</label></div>
             <input type="password" placeholder="Confirmar senha" id="confirmPassword" onchange="onChangeConfirmPassword()">
-            <div class="error" id="senha-nao-igual">Senha e Confirmar Senha devem ser iguais</div>
+            <div class="error" id="password-doesnt-match-error">Senha e Confirmar Senha devem ser iguais</div>
         </div>
         <div class="form-field">
             <button type="button" disabled="true" id="register-button">Registrar</button>

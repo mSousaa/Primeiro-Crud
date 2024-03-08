@@ -1,0 +1,8 @@
+input, button {
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+header button{
+    width: auto;
+}

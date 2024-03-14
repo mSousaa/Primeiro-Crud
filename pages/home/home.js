@@ -6,13 +6,20 @@ function logout(){
     })
 }
 
-function findTransactions (){
+findTransactions()
+function findTransactions(){
     firebase.firestore()
-        .collection('transactions')
+        .collection("transactions")
         .get()
         .then(snapshot => {
+            hideLoading()
             const transactions = snapshot.docs.map(doc => doc.data())
             addTransactionsToScreen(transactions)
+        })
+        .catch(error => {
+            hideLoading()
+            console.log(error)
+            alert("Erro ao recuperar transações")
         })
 }   
 

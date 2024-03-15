@@ -6,21 +6,24 @@ function logout(){
     })
 }
 
-findTransactions()
-function findTransactions(){
+firebase.auth().onAuthStateChanged(user => {
+    if(user){
+        findTransactions(user)
+    }
+})
+
+
+function findTransactions(user){
     firebase.firestore()
-        .collection("transactions")
+        .collection('teste')
         .get()
         .then(snapshot => {
-            hideLoading()
             const transactions = snapshot.docs.map(doc => doc.data())
+            console.log(transactions)
             addTransactionsToScreen(transactions)
         })
-        .catch(error => {
-            hideLoading()
-            console.log(error)
-            alert("Erro ao recuperar transações")
-        })
+
+
 }   
 
 function addTransactionsToScreen(transactions) {
